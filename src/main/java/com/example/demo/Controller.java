@@ -14,7 +14,7 @@ public class Controller {
 	private RabbitTemplate rabbitTemplate;
 	
 	
-	@GetMapping("/hai")
+	@GetMapping("/hai") 
 	public String triggerRabbit() throws Exception {
 		Thread.sleep(10000);
 		rabbitTemplate.convertAndSend(RabbitmqApplication.topicExchangeName, "foo.bar.baz", "Hello from RabbitMQ1234567890!");
